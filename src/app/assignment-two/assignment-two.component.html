@@ -4,5 +4,5 @@
   <label for="username">Type your username:</label>
   <input type="text" name="username" id="username" [(ngModel)]="username">
   <p class="username-output">Your new username is {{ username }}</p>
-  <button class="btn btn-primary" [disabled]="!username">Reset username</button>
+  <button class="btn btn-primary" [disabled]="!username" (click)="onResetUsername()">Reset username</button>
 </div>
