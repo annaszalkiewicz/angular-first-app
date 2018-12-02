@@ -9,6 +9,7 @@ import { ServersComponent } from './servers/servers.component';
 import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { AssignmentOneComponent } from './assignment-one/assignment-one.component';
+import { AssignmentTwoComponent } from './assignment-two/assignment-two.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AssignmentOneComponent } from './assignment-one/assignment-one.componen
     ServersComponent,
     MainComponent,
     AboutComponent,
-    AssignmentOneComponent
+    AssignmentOneComponent,
+    AssignmentTwoComponent
   ],
   imports: [
     BrowserModule,
