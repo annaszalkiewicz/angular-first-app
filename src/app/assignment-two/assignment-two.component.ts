@@ -14,4 +14,8 @@ export class AssignmentTwoComponent implements OnInit {
   ngOnInit() {
   }
 
+  onResetUsername() {
+    this.username = '';
+  }
+
 }
