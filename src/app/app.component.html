@@ -1,12 +1,11 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<!-- The content below is only a placeholder and can be replaced. -->
 <div style="text-align:center">
-  <h1>
-    Hello, my name is {{ name }}!
-  </h1>
-<input type="text" [(ngModel)]="name">
-<p>{{name}}</p>
-<hr>
-<app-servers></app-servers>
-<app-main></app-main>
-
+  <h1>Hello, my name is {{ name }}!</h1>
+  <hr />
+  <app-assignment-one></app-assignment-one>
+  <input type="text" [(ngModel)]="name" />
+  <p>{{ name }}</p>
+  <hr />
+  <app-servers></app-servers>
+</div>
 <router-outlet></router-outlet>

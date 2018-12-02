@@ -8,6 +8,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
+import { AssignmentOneComponent } from './assignment-one/assignment-one.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AboutComponent } from './about/about.component';
     ServerComponent,
     ServersComponent,
     MainComponent,
-    AboutComponent
+    AboutComponent,
+    AssignmentOneComponent
   ],
   imports: [
     BrowserModule,
