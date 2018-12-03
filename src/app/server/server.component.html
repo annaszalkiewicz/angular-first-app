@@ -2,4 +2,4 @@
 
 <p>The server number {{ serverId }} is {{ status }}.</p>
 
-<p>The server is {{ getStatus() }}</p>
+<p [ngStyle]="{backgroundColor: getColor()}">The server is {{ getStatus() }}</p>
