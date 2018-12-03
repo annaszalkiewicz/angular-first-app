@@ -1,4 +1,3 @@
-<app-server></app-server>
 
 <label for="server-name">Server Name</label>
 <input
@@ -32,6 +31,8 @@
 
 <!-- <p>{{ newServerStatus }}</p> -->
 
-<p *ngIf="serverCreated">
+<p *ngIf="serverCreated" >
   New server has been created. Server name is {{ serverTwoName }}
 </p>
+
+<app-server *ngFor="let server of servers"></app-server>
