@@ -1,15 +1,37 @@
 <app-server></app-server>
 
 <label for="server-name">Server Name</label>
-<input type="text" name="server-name" id="server-name" (input)="onUpdateServerName($event)">
+<input
+  type="text"
+  name="server-name"
+  id="server-name"
+  (input)="onUpdateServerName($event)"
+/>
 
 <p>{{ serverName }}</p>
 
 <label for="server-two-name">Server 2 Name</label>
-<input type="text" name="server-two-name" id="server-two-name" [(ngModel)]="serverTwoName">
+<input
+  type="text"
+  name="server-two-name"
+  id="server-two-name"
+  [(ngModel)]="serverTwoName"
+/>
 
-<p>{{ serverTwoName }}</p>
+<!-- <p>{{ serverTwoName }}</p> -->
 
-<button class="btn btn-primary" [disabled]="!allowAddServer" (click)="onCreateServer()">Add server</button>
+<div class="row">
+  <button
+    class="btn btn-primary"
+    [disabled]="!allowAddServer"
+    (click)="onCreateServer()"
+  >
+    Add server
+  </button>
+</div>
 
-<p>{{ newServerStatus }}</p>
+<!-- <p>{{ newServerStatus }}</p> -->
+
+<p *ngIf="serverCreated">
+  New server has been created. Server name is {{ serverTwoName }}
+</p>
