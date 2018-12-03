@@ -10,6 +10,7 @@ import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { AssignmentOneComponent } from './assignment-one/assignment-one.component';
 import { AssignmentTwoComponent } from './assignment-two/assignment-two.component';
+import { AssignmentThreeComponent } from './assignment-three/assignment-three.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AssignmentTwoComponent } from './assignment-two/assignment-two.componen
     MainComponent,
     AboutComponent,
     AssignmentOneComponent,
-    AssignmentTwoComponent
+    AssignmentTwoComponent,
+    AssignmentThreeComponent
   ],
   imports: [
     BrowserModule,
