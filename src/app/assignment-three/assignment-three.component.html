@@ -5,8 +5,10 @@
     Display details
   </button>
   <p
+    class="clicks"
     *ngIf="showParagraph"
     [ngStyle]="{ backgroundColor: getColor() }"
+    [ngClass]="{white: count >= 5}"
   >
     You clicked button {{ count }} time(s)!
   </p>
