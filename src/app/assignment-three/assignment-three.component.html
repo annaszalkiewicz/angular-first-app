@@ -1,6 +1,6 @@
 <div class="assignments-container">
   <h1>Assignment 3: Practicing Directives</h1>
   <hr />
-  <button class="btn btn-primary">Display details</button>
-  <p>You clicked button!</p>
+  <button class="btn btn-primary" (click)="onButtonClick()">Display details</button>
+  <p *ngIf="showParagraph">You clicked button!</p>
 </div>
