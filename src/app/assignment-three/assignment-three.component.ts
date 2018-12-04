@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NONE_TYPE } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-assignment-three',
@@ -18,6 +19,10 @@ export class AssignmentThreeComponent implements OnInit {
   onButtonClick() {
     this.showParagraph = true;
     this.count++;
+  }
+
+  getColor() {
+    return this.count >= 5 ? 'blue' : 'none';
   }
 
 }
