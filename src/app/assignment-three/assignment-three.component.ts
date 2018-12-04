@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AssignmentThreeComponent implements OnInit {
 
-  count = 0;
   showParagraph = false;
+  count = 0;
 
   constructor() { }
 
@@ -17,6 +17,7 @@ export class AssignmentThreeComponent implements OnInit {
 
   onButtonClick() {
     this.showParagraph = true;
+    this.count++;
   }
 
 }
