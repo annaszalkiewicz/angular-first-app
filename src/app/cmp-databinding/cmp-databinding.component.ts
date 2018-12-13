@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CmpDatabindingComponent implements OnInit {
 
-  serverElements = [];
+  serverElements = [{type: 'server', name: 'Testserver', content: 'This is test server'}];
 
   constructor() { }
 
