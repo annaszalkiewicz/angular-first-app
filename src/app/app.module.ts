@@ -12,6 +12,7 @@ import { AssignmentOneComponent } from './assignment-one/assignment-one.componen
 import { AssignmentTwoComponent } from './assignment-two/assignment-two.component';
 import { AssignmentThreeComponent } from './assignment-three/assignment-three.component';
 import { CmpDatabindingComponent } from './cmp-databinding/cmp-databinding.component';
+import { CockpitComponent } from './cmp-databinding/cockpit/cockpit.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CmpDatabindingComponent } from './cmp-databinding/cmp-databinding.compo
     AssignmentOneComponent,
     AssignmentTwoComponent,
     AssignmentThreeComponent,
-    CmpDatabindingComponent
+    CmpDatabindingComponent,
+    CockpitComponent
   ],
   imports: [
     BrowserModule,
