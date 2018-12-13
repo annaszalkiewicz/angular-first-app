@@ -28,7 +28,7 @@ import { CmpDatabindingComponent } from './cmp-databinding/cmp-databinding.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
