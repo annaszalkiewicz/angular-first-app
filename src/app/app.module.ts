@@ -29,7 +29,7 @@ import { AssignmentFourComponent } from './assignment-four/assignment-four.compo
     CmpDatabindingComponent,
     CockpitComponent,
     ServerElementComponent,
-    AssignmentFourComponent
+    AssignmentFourComponent,
   ],
   imports: [
     BrowserModule,
