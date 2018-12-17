@@ -16,6 +16,7 @@ import { CockpitComponent } from './cmp-databinding/cockpit/cockpit.component';
 import { ServerElementComponent } from './cmp-databinding/server-element/server-element.component';
 import { AssignmentFourComponent } from './assignment-four/assignment-four.component';
 import { GameControlComponent } from './assignment-four/game-control/game-control.component';
+import { OddComponent } from './assignment-four/game-control/odd/odd.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { GameControlComponent } from './assignment-four/game-control/game-contro
     ServerElementComponent,
     AssignmentFourComponent,
     GameControlComponent,
+    OddComponent,
   ],
   imports: [
     BrowserModule,
