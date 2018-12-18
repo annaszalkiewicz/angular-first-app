@@ -1,7 +1,13 @@
 <div class="row">
   <div class="col-xs-12">
-    <button class="btn btn-primary">Start</button>
-    <button class="btn btn-secondary">Stop</button>
+    <button
+      class="btn btn-primary"
+      (click)="onGameStarted()"
+    >Start</button>
+    <button
+      class="btn btn-secondary"
+      (click)="onGameEnded()"
+    >Stop</button>
   </div>
 </div>
 <app-odd></app-odd>
