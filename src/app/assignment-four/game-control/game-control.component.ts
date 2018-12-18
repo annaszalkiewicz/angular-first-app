@@ -7,13 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameControlComponent implements OnInit {
 
+  count = 0;
+
   constructor() { }
 
   ngOnInit() {
   }
 
   onGameStarted() {
-    console.log('Start button clicked!');
+    setInterval(() => {
+      this.count += 1;
+    }, 1000);
   }
 
   onGameEnded() {
