@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AssignmentFourComponent implements OnInit {
 
+  timer;
+  count = 0;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onGameStarted() {
+
+    this.timer = setInterval(() => {
+        this.count += 1;
+    }, 1000);
+
   }
 
 }

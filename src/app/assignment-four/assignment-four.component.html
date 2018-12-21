@@ -1,5 +1,7 @@
 <div class="assignments-container">
   <h1>Assignment 4: Practicing Property & Event Binding and View Encapsulation</h1>
   <hr />
-  <app-game-control></app-game-control>
+  <app-game-control
+    (gameStarted)="onGameStarted($event)"
+  ></app-game-control>
 </div>
