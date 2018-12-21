@@ -4,4 +4,20 @@
   <app-game-control
     (gameStarted)="onGameStarted($event)"
   ></app-game-control>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-odd>
+        <p
+          class="odd"
+          *ngIf="count % 2 === 0"
+        >{{ count }}</p>
+      </app-odd>
+      <app-even>
+        <p
+          class="even"
+          *ngIf="count % 2 !== 0"
+        >{{ count }}</p>
+      </app-even>
+    </div>
+  </div>
 </div>
