@@ -1,26 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-assignment-four',
-  templateUrl: './assignment-four.component.html',
-  styleUrls: ['./assignment-four.component.css']
+  selector: "app-assignment-four",
+  templateUrl: "./assignment-four.component.html",
+  styleUrls: ["./assignment-four.component.css"]
 })
 export class AssignmentFourComponent implements OnInit {
-
   timer;
   count = 0;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onGameStarted() {
-
     this.timer = setInterval(() => {
-        this.count += 1;
+      this.count += 1;
     }, 1000);
-
   }
 
+  onGameEnded() {
+    clearInterval(this.timer);
+  }
 }
