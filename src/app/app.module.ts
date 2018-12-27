@@ -18,6 +18,7 @@ import { AssignmentFourComponent } from './assignment-four/assignment-four.compo
 import { GameControlComponent } from './assignment-four/game-control/game-control.component';
 import { OddComponent } from './assignment-four/game-control/odd/odd.component';
 import { EvenComponent } from './assignment-four/game-control/even/even.component';
+import { OnlyOddComponent } from './only-odd/only-odd.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { EvenComponent } from './assignment-four/game-control/even/even.componen
     GameControlComponent,
     OddComponent,
     EvenComponent,
+    OnlyOddComponent,
   ],
   imports: [
     BrowserModule,

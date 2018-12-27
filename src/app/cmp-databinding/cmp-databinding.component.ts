@@ -1,13 +1,13 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: "app-cmp-databinding",
-  templateUrl: "./cmp-databinding.component.html",
-  styleUrls: ["./cmp-databinding.component.css"]
+  selector: 'app-cmp-databinding',
+  templateUrl: './cmp-databinding.component.html',
+  styleUrls: ['./cmp-databinding.component.css']
 })
 export class CmpDatabindingComponent implements OnInit {
   serverElements = [
-    { type: "server", name: "Testserver", content: "This is test server" }
+    { type: 'server', name: 'Testserver', content: 'This is test server' }
   ];
 
   constructor() {}
@@ -16,7 +16,7 @@ export class CmpDatabindingComponent implements OnInit {
 
   onServerCreated(serverData: {serverName: string, serverContent: string}) {
     this.serverElements.push({
-      type: "server",
+      type: 'server',
       name: serverData.serverName,
       content: serverData.serverContent
     });
@@ -24,7 +24,7 @@ export class CmpDatabindingComponent implements OnInit {
 
   onBlueprintCreated(blueprintData: {serverName: string, serverContent: string}) {
     this.serverElements.push({
-      type: "blueprint",
+      type: 'blueprint',
       name: blueprintData.serverName,
       content: blueprintData.serverContent
     });
