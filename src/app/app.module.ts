@@ -19,6 +19,7 @@ import { GameControlComponent } from './assignment-four/game-control/game-contro
 import { OddComponent } from './assignment-four/game-control/odd/odd.component';
 import { EvenComponent } from './assignment-four/game-control/even/even.component';
 import { OnlyOddComponent } from './only-odd/only-odd.component';
+import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { OnlyOddComponent } from './only-odd/only-odd.component';
     OddComponent,
     EvenComponent,
     OnlyOddComponent,
+    BasicHighlightDirective,
   ],
   imports: [
     BrowserModule,
