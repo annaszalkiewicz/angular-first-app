@@ -22,6 +22,7 @@ import { OnlyOddComponent } from './only-odd/only-odd.component';
 import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 import { UnlessDirective } from './unless/unless.directive';
+import { AssignmentFiveComponent } from './assignment-five/assignment-five.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { UnlessDirective } from './unless/unless.directive';
     BasicHighlightDirective,
     BetterHighlightDirective,
     UnlessDirective,
+    AssignmentFiveComponent,
   ],
   imports: [
     BrowserModule,
