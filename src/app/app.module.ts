@@ -23,6 +23,8 @@ import { BasicHighlightDirective } from './basic-highlight/basic-highlight.direc
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 import { UnlessDirective } from './unless/unless.directive';
 import { AssignmentFiveComponent } from './assignment-five/assignment-five.component';
+import { InactiveUsersComponent } from './assignment-five/inactive-users/inactive-users.component';
+import { ActiveUsersComponent } from './assignment-five/active-users/active-users.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { AssignmentFiveComponent } from './assignment-five/assignment-five.compo
     BetterHighlightDirective,
     UnlessDirective,
     AssignmentFiveComponent,
+    ActiveUsersComponent,
+    InactiveUsersComponent
   ],
   imports: [
     BrowserModule,
