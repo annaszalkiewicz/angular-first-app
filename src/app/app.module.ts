@@ -25,6 +25,7 @@ import { UnlessDirective } from './unless/unless.directive';
 import { AssignmentFiveComponent } from './assignment-five/assignment-five.component';
 import { InactiveUsersComponent } from './assignment-five/inactive-users/inactive-users.component';
 import { ActiveUsersComponent } from './assignment-five/active-users/active-users.component';
+import { AssignmentSixComponent } from './assignment-six/assignment-six.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { ActiveUsersComponent } from './assignment-five/active-users/active-user
     UnlessDirective,
     AssignmentFiveComponent,
     ActiveUsersComponent,
-    InactiveUsersComponent
+    InactiveUsersComponent,
+    AssignmentSixComponent
   ],
   imports: [
     BrowserModule,
