@@ -11,7 +11,9 @@
           id="email"
           class="form-control"
           ngModel
-          required>
+          required
+          email
+          #email="ngModel">
       </div>
     </div>
     <div class="form-group row">
@@ -38,9 +40,14 @@
           id="password"
           class="form-control"
           ngModel
-          required>
+          required
+          password
+          #password="ngModel">
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="!f.valid">Submit</button>
   </form>
 </div>
