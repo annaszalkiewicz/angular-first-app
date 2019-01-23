@@ -1,17 +1,28 @@
 <div class="assignments-container">
   <h1>Assignment 6: Practicing Template-Driven Forms</h1>
   <hr />
-  <form>
+  <form #f="ngForm" (ngSubmit)="onSubmit()">
     <div class="form-group row">
       <label for="email" class="col-sm-4 col-form-label text-right">Email</label>
       <div class="col-sm-5">
-        <input type="email" name="email" id="email" class="form-control">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="form-control"
+          ngModel
+          required>
       </div>
     </div>
     <div class="form-group row">
       <label for="dropdown" class="col-sm-4 text-right">Choose level</label>
       <div class="col-sm-5">
-        <select name="dropdown" id="dropdown" class="form-control">
+        <select
+          name="dropdown"
+          id="dropdown"
+          class="form-control"
+          ngModel
+          required>
           <option value="basic">Basic</option>
           <option value="advanced">Advanced</option>
           <option value="pro">Pro</option>
@@ -21,7 +32,13 @@
     <div class="form-group row">
       <label for="password" class="col-sm-4 text-right">Password</label>
       <div class="col-sm-5">
-        <input type="password" name="password" id="password" class="form-control">
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="form-control"
+          ngModel
+          required>
       </div>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
