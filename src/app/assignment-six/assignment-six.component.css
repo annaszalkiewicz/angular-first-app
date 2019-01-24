@@ -1,3 +1,6 @@
 input.ng-invalid.ng-touched {
   border: solid 2px red;
 }
+.submitted {
+  margin: 1rem;
+}

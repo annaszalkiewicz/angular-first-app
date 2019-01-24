@@ -58,4 +58,18 @@
       class="btn btn-primary"
       [disabled]="!f.valid">Submit</button>
   </form>
+  <div class="submitted" *ngIf="submitted">
+    <div class="row">
+      <div class="col-sm-6 text-right">Email:</div>
+      <div class="col-sm-5 text-left">{{ user.email }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 text-right">Password:</div>
+        <div class="col-sm-5 text-left">{{ user.password }}</div>
+      </div>
+      <div class="row">
+          <div class="col-sm-6 text-right">Subscription:</div>
+          <div class="col-sm-5 text-left">{{ user.subscription }}</div>
+        </div>
+  </div>
 </div>

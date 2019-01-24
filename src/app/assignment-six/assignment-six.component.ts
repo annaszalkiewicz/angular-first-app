@@ -9,6 +9,12 @@ import { NgForm } from '@angular/forms';
 export class AssignmentSixComponent implements OnInit {
   @ViewChild('f') signupForm: NgForm;
   defaultSubscription = 'advanced';
+  submitted = false;
+  user = {
+    email: '',
+    password: '',
+    subscription: ''
+  };
 
   constructor() { }
 
@@ -17,6 +23,10 @@ export class AssignmentSixComponent implements OnInit {
 
   onSubmit() {
     console.log(this.signupForm);
+    this.submitted = true;
+    this.user.email = this.signupForm.value.email;
+    this.user.password = this.signupForm.value.password;
+    this.user.subscription = this.signupForm.value.dropdown;
   }
 
 }
