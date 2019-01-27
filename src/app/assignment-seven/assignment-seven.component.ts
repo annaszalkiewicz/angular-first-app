@@ -20,4 +20,8 @@ export class AssignmentSevenComponent implements OnInit {
     });
   }
 
+  onSubmit() {
+    console.log(this.signupForm);
+  }
+
 }

@@ -1,7 +1,9 @@
 <div class="assignments-container">
   <h1>Assignment 7: Practicing Reactive Forms</h1>
   <hr>
-  <form [formGroup]="signupForm">
+  <form
+    [formGroup]="signupForm"
+    (ngSubmit)="onSubmit()">
     <div class="form-group row">
       <label for="name" class="col-sm-4 col-form-label text-right">Project name:</label>
       <div class="col-sm-5">
