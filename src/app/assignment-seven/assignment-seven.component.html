@@ -13,6 +13,16 @@
           id="name"
           class="form-control"
           formControlName="name">
+          <small
+            class="text-left form-text text-muted"
+            *ngIf="!signupForm.get('name').valid && signupForm.get('name').touched">
+            <small
+              class="text-left form-text text-muted"
+              *ngIf="signupForm.get('name').errors['nameIsForbidden']">This name is forbidden!</small>
+            <small
+              class="text-left form-text text-muted"
+              *ngIf="signupForm.get('name').errors['required']">Please enter a valid project name!</small>
+          </small>
       </div>
     </div>
     <div class="form-group row">
