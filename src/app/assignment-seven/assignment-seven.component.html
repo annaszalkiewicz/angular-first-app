@@ -34,6 +34,12 @@
           id="email-reactive"
           class="form-control"
           formControlName="email">
+          <small
+            class="text-left form-text text-muted"
+            *ngIf="signupForm.get('email').errors['required'] && signupForm.get('email').touched">Please enter email!</small>
+          <small
+            class="text-left form-text text-muted"
+            *ngIf="signupForm.get('email').errors['email']">Please enter a valid email!</small>
       </div>
     </div>
     <div class="form-group row">
