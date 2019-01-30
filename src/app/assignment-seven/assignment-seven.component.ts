@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-assignment-seven',
@@ -9,6 +9,12 @@ import { Observable } from 'rxjs/Observable';
 })
 export class AssignmentSevenComponent implements OnInit {
   signupForm: FormGroup;
+  submitted = false;
+  user = {
+    name: '',
+    email: '',
+    status: ''
+  };
 
   constructor() {}
 
@@ -22,13 +28,19 @@ export class AssignmentSevenComponent implements OnInit {
 
   onSubmit() {
     console.log(this.signupForm);
+    this.submitted = true;
+    this.user.name = this.signupForm.value.name;
+    this.user.email = this.signupForm.value.email;
+    this.user.status = this.signupForm.value.status;
+    console.log(this.submitted);
+    this.signupForm.reset();
   }
 
   forbiddenName(control: FormControl): Promise<any> | Observable<any> {
     const promise = new Promise<any>((resolve, reject) => {
       setTimeout(() => {
         if (control.value === 'Test') {
-          resolve({ nameIsForbidden: true });
+          resolve({ 'nameIsForbidden': true });
         } else {
           resolve(null);
         }
@@ -36,4 +48,5 @@ export class AssignmentSevenComponent implements OnInit {
     });
     return promise;
   }
+
 }

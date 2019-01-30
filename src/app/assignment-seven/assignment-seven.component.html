@@ -1,61 +1,96 @@
 <div class="assignments-container">
   <h1>Assignment 7: Practicing Reactive Forms</h1>
-  <hr>
-  <form
-    [formGroup]="signupForm"
-    (ngSubmit)="onSubmit()">
+  <hr />
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
     <div class="form-group row">
-      <label for="name" class="col-sm-4 col-form-label text-right">Project name:</label>
+      <label for="name" class="col-sm-4 col-form-label text-right"
+        >Project name:</label
+      >
       <div class="col-sm-5">
         <input
           type="text"
           name="name"
           id="name"
           class="form-control"
-          formControlName="name">
+          formControlName="name"
+        />
+        <small
+          class="text-left form-text text-muted"
+          *ngIf="
+            !signupForm.get('name').valid && signupForm.get('name').touched
+          "
+        >
           <small
             class="text-left form-text text-muted"
-            *ngIf="!signupForm.get('name').valid && signupForm.get('name').touched">
-            <small
-              class="text-left form-text text-muted"
-              *ngIf="signupForm.get('name').errors['nameIsForbidden']">This name is forbidden!</small>
-            <small
-              class="text-left form-text text-muted"
-              *ngIf="signupForm.get('name').errors['required']">Please enter a valid project name!</small>
-          </small>
+            *ngIf="signupForm.get('name').errors['nameIsForbidden']"
+            >This name is forbidden!</small
+          >
+          <small
+            class="text-left form-text text-muted"
+            *ngIf="signupForm.get('name').errors['required']"
+            >Please enter a valid project name!</small
+          >
+        </small>
       </div>
     </div>
     <div class="form-group row">
-      <label for="email-reactive" class="col-sm-4 col-form-label text-right">Email:</label>
+      <label for="email-reactive" class="col-sm-4 col-form-label text-right"
+        >Email:</label
+      >
       <div class="col-sm-5">
         <input
-          type="email"
+          type="text"
           name="email-reactive"
           id="email-reactive"
           class="form-control"
-          formControlName="email">
-          <small
-            class="text-left form-text text-muted"
-            *ngIf="signupForm.get('email').errors['required'] && signupForm.get('email').touched">Please enter email!</small>
-          <small
-            class="text-left form-text text-muted"
-            *ngIf="signupForm.get('email').errors['email']">Please enter a valid email!</small>
+          formControlName="email"
+        />
+        <small
+          class="text-left form-text text-muted"
+          *ngIf="
+            signupForm.get('email').errors['required'] &&
+            signupForm.get('email').touched
+          "
+          >Please enter email!</small
+        >
+        <small
+          class="text-left form-text text-muted"
+          *ngIf="signupForm.get('email').errors['email']"
+          >Please enter a valid email!</small
+        >
       </div>
     </div>
     <div class="form-group row">
-      <label for="dropdown-reactive" class="col-sm-4 text-right">Project status</label>
+      <label for="dropdown-reactive" class="col-sm-4 text-right"
+        >Project status</label
+      >
       <div class="col-sm-5">
         <select
           name="dropdown-reactive"
           id="dropdown-reactive"
           class="form-control"
-          formControlName="status">
+          formControlName="status"
+        >
           <option value="stable">Stable</option>
-          <option value="critical" >Critical</option>
+          <option value="critical">Critical</option>
           <option value="finished">Finished</option>
         </select>
       </div>
     </div>
     <button class="btn btn-primary" type="submit">Submit</button>
   </form>
+  <div class="submitted" *ngIf="submitted">
+    <div class="row">
+      <div class="col-sm-6 text-right">Project name:</div>
+      <div class="col-sm-5 text-left">{{ user.name }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 text-right">Email:</div>
+      <div class="col-sm-5 text-left">{{ user.email }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 text-right">Status:</div>
+      <div class="col-sm-5 text-left">{{ user.status }}</div>
+    </div>
+  </div>
 </div>
