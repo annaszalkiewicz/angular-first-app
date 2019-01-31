@@ -32,7 +32,6 @@ export class AssignmentSevenComponent implements OnInit {
     this.user.name = this.signupForm.value.name;
     this.user.email = this.signupForm.value.email;
     this.user.status = this.signupForm.value.status;
-    console.log(this.submitted);
     this.signupForm.reset();
   }
 

@@ -14,15 +14,10 @@
           class="form-control"
           formControlName="name"
         />
-        <small
-          class="text-left form-text text-muted"
-          *ngIf="
-            !signupForm.get('name').valid && signupForm.get('name').touched
-          "
-        >
+        <small *ngIf="!signupForm.valid && signupForm.touched">
           <small
             class="text-left form-text text-muted"
-            *ngIf="signupForm.get('name').errors['nameIsForbidden']"
+            *ngIf="signupForm.get('name').errors['nameIsForbidden'] && signupForm.get('name').touched"
             >This name is forbidden!</small
           >
           <small
@@ -45,19 +40,21 @@
           class="form-control"
           formControlName="email"
         />
-        <small
-          class="text-left form-text text-muted"
-          *ngIf="
-            signupForm.get('email').errors['required'] &&
-            signupForm.get('email').touched
-          "
-          >Please enter email!</small
-        >
-        <small
-          class="text-left form-text text-muted"
-          *ngIf="signupForm.get('email').errors['email']"
-          >Please enter a valid email!</small
-        >
+        <small *ngIf="!signupForm.valid && signupForm.touched">
+          <small
+            class="text-left form-text text-muted"
+            *ngIf="
+              signupForm.get('email').errors['required'] &&
+              signupForm.get('email').touched
+            "
+            >Please enter email!</small
+          >
+          <small
+            class="text-left form-text text-muted"
+            *ngIf="signupForm.get('email').errors['email']"
+            >Please enter a valid email!</small
+          >
+        </small>
       </div>
     </div>
     <div class="form-group row">
