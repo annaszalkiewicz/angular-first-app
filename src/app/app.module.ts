@@ -27,6 +27,7 @@ import { InactiveUsersComponent } from './assignment-five/inactive-users/inactiv
 import { ActiveUsersComponent } from './assignment-five/active-users/active-users.component';
 import { AssignmentSixComponent } from './assignment-six/assignment-six.component';
 import { AssignmentSevenComponent } from './assignment-seven/assignment-seven.component';
+import { AssignmentEightComponent } from './assignment-eight/assignment-eight.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { AssignmentSevenComponent } from './assignment-seven/assignment-seven.co
     ActiveUsersComponent,
     InactiveUsersComponent,
     AssignmentSixComponent,
-    AssignmentSevenComponent
+    AssignmentSevenComponent,
+    AssignmentEightComponent
   ],
   imports: [
     BrowserModule,
