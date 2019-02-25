@@ -1,3 +1,30 @@
-<p>
-  assignment-eight works!
-</p>
+<div class="assignments-container">
+  <h1>Assignment 8: Practicing pipes</h1>
+  <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <input type="text" [(ngModel)]="filteredStatus">
+        <br>
+        <button class="btn btn-primary" (click)="onAddServer()">Add Server</button>
+        <br><br>
+        <h2>App Status: {{ appStatus }}</h2>
+        <hr>
+        <ul class="list-group">
+          <li
+            class="list-group-item"
+            *ngFor="let server of servers"
+            [ngClass]="getStatusClasses(server)">
+            <span
+              class="badge badge-secondary">
+              {{ server.status }}
+            </span>
+            <strong>{{ server.name }}</strong> |
+            {{ server.instanceType }} |
+            {{ server.started }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
