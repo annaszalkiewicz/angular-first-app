@@ -28,6 +28,7 @@ import { ActiveUsersComponent } from './assignment-five/active-users/active-user
 import { AssignmentSixComponent } from './assignment-six/assignment-six.component';
 import { AssignmentSevenComponent } from './assignment-seven/assignment-seven.component';
 import { AssignmentEightComponent } from './assignment-eight/assignment-eight.component';
+import { FilterPipe } from './assignment-eight/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { AssignmentEightComponent } from './assignment-eight/assignment-eight.co
     InactiveUsersComponent,
     AssignmentSixComponent,
     AssignmentSevenComponent,
-    AssignmentEightComponent
+    AssignmentEightComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
