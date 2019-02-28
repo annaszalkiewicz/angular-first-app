@@ -30,6 +30,7 @@ import { AssignmentSevenComponent } from './assignment-seven/assignment-seven.co
 import { AssignmentEightComponent } from './assignment-eight/assignment-eight.component';
 import { FilterPipe } from './assignment-eight/filter.pipe';
 import { ShortenPipe } from './assignment-eight/shorten.pipe';
+import { ReversePipe } from './assignment-eight/reverse.pipe';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { ShortenPipe } from './assignment-eight/shorten.pipe';
     AssignmentSevenComponent,
     AssignmentEightComponent,
     FilterPipe,
-    ShortenPipe
+    ShortenPipe,
+    ReversePipe
   ],
   imports: [
     BrowserModule,
